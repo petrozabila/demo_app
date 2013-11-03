@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -32,6 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'protected_attributes'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -43,13 +44,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-group :development do
-	gem 'taps', :require => false # has an sqlite dependency, which heroku hates
-	gem 'sqlite3'
-end
-
-group :production, :staging do
-      gem 'pg'
-      gem 'rails_12factor'
-end
